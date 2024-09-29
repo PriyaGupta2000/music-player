@@ -1,0 +1,136 @@
+/* MusicPlayer.css */
+
+/* General Music Player Layout */
+body{
+    background-color: rgb(4, 31, 68);
+}
+.music-player {
+    background-color: #1e1e1e;
+    color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Album Art */
+  .album-cover img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+  
+  /* Song Info */
+  .song-info {
+    text-align: center;
+  }
+  
+  .song-info h2 {
+    margin: 5px 0;
+    font-size: 1.5rem;
+  }
+  
+  .song-info p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #b3b3b3;
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 15px 0;
+  }
+  
+  .play-pause-btn,
+  .prev-btn,
+  .next-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .play-pause-btn:hover,
+  .prev-btn:hover,
+  .next-btn:hover {
+    color: #1db954;
+  }
+  
+  /* Progress Bar */
+  .progress-bar input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  /* Volume Control */
+  .volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .volume-control input[type="range"] {
+    width: 100px;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  
+  /* For larger devices (Tour Bus Dashboard) */
+  @media (min-width: 1024px) {
+    .music-player {
+      flex-direction: row;
+      max-width: 800px;
+      padding: 40px;
+    }
+  
+    .album-cover {
+      flex: 1;
+    }
+  
+    .album-cover img {
+      max-width: 300px;
+    }
+  
+    .song-info,
+    .controls,
+    .volume-control {
+      flex: 2;
+      padding-left: 40px;
+    }
+  }
+  
+  /* For smaller devices (Smartwatch) */
+  @media (max-width: 480px) {
+    .music-player {
+      max-width: 320px;
+      padding: 10px;
+    }
+  
+    .controls {
+      gap: 5px;
+      margin: 10px 0;
+    }
+  
+    .play-pause-btn,
+    .prev-btn,
+    .next-btn {
+      font-size: 1.5rem;
+    }
+  
+    .song-info h2 {
+      font-size: 1.2rem;
+    }
+  
+    .song-info p {
+      font-size: 1rem;
+    }
+  }
+  
